@@ -41,7 +41,7 @@ docker swarm join --token <token-id> <ipaddress:port>
 * https://docs.docker.com/datacenter/dtr/2.3/guides/admin/backups-and-disaster-recovery/#backup-image-content
 
 ## Installing Docker Trusted Registry
-* (Install Docker Trusted Registry)[https://docs.docker.com/datacenter/dtr/2.4/guides/admin/install/]
+* [Install Docker Trusted Registry](https://docs.docker.com/datacenter/dtr/2.4/guides/admin/install/)
 
 ## Docker Logging
 * https://docs.docker.com/config/containers/logging/configure/
