@@ -7,6 +7,7 @@
 * With the highest level of Docker Enterprise the Universal Control Plane can also include secure image scanning and continuous monitoring of your images in the registry. Finally, Docker Enterprise Edition includes Docker Trusted Registry or DTR.
  Docker NameSpaces
 *The Docker engine utilizes something called 'Namespaces' to isolate what's happening in the running containers from the operating system that those containers are running on. With Namespaces the kernal resources such as the process ID, user IDs, network storage, and inner process communications or IPC, can all be virtualized and shared between the host operating system and the containers running on top. Namespaces weren't created by Docker.
+
 ## Docker control groups and Limit a container's resources
 * [Limit a container's resources](https://docs.docker.com/config/containers/resource_constraints/)
 * To add user to a group use -- sudo usermod -aG docker $USER
