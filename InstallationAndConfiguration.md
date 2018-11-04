@@ -26,3 +26,33 @@ docker swarm join --token <token-id> <ipaddress:port>
 ```
 ## Configuring Docker to start on boot
 * [Docker to start on boot](https://docs.docker.com/install/linux/linux-postinstall/#configure-docker-to-start-on-boot)
+
+
+## Backing up Docker
+* [Backing Docker EE](https://docs.docker.com/eebackup)
+* [Backing Swarm cluster](https://docs.docker.com/engine/swarm/admin_guide/#back-up-the-swarm)
+### Backing up swarm
+* stop Docker 
+* go to /var/lib/docker
+* copy the swarm directory to  back location
+### Backing up UCP
+* https://docs.docker.com/datacenter/ucp/2.2/guides/admin/backups-and-disaster-recovery/
+### Backing up Docker Registry
+* https://docs.docker.com/datacenter/dtr/2.3/guides/admin/backups-and-disaster-recovery/#backup-image-content
+
+## Installing Docker Trusted Registry
+* (Install Docker Trusted Registry)[https://docs.docker.com/datacenter/dtr/2.4/guides/admin/install/]
+
+## Docker Logging
+* https://docs.docker.com/config/containers/logging/configure/
+
+```shell
+ docker info | grep 'Logger Driver'
+ cd /etc/docker
+ > deamon.json
+ docker run --log-driver=syslog --log-opt syslog-address=udp://1.1.1.1 <containers> # to chage log driver while running the container
+```
+
+## Analyzing Docker errors
+* [Troubleshoot](https://docs.docker.com/install/linux/linux-postinstall/#troubleshooting)
+
