@@ -22,7 +22,9 @@ docker service create --replicas <no. of replicas> --name <service-name> <docker
 - **Insert picture here**
 
 ### Locking a Swarm Cluster
-[lock-swarm-manager](https://docs.docker.com/engine/swarm/swarm_manager_locking/)
+
+* [lock-swarm-manager](https://docs.docker.com/engine/swarm/swarm_manager_locking/)
+
 * Securing swarm is also important because of the ability for Docker to store and distribute secret keys for other applications with the Docker secrets feature. Any time that the Docker daemon restarts, the keys used to encrypt communication between nodes and the keys used to encrypt the logs on the disc are loaded. With Docker 1.13 and higher, you have the option to better protect the encryption keys used to access the swarm log by having the swarm managers require you to provide this key when they're restarted for security reasons.
 ```shell
 docker swarm init --autolock ## when initialze
