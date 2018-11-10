@@ -1,5 +1,8 @@
 # Docker Essential Training: 1 Installation and Configuration
 
+## Docker arch
+![docker-arch1](1-Installation-and-configuration/Docker-Arch.png)
+![docker-arch1](1-Installation-and-configuration/Docker-Arch-2.png)
 ## Sizing Docker
 * Before you install Docker, it's important to understand the prerequisites and insure that your hardware is sized appropriately. For the community edition there are no specific hardware requirements other than those of whatever operating system you're installing Docker on. For Docker Enterprise edition, because Universal Control Plane and Docker Trusted Registry, which are important pieces of the enterprise edition, require much more resources than Docker's engine itself, you should be aware of the specific guidelines for deploying UCP and DTR.
 * [Docker best practices](https://success.docker.com/article/docker-ee-best-practices)
@@ -7,7 +10,7 @@
 ## Universal Control Plane
 * With the highest level of Docker Enterprise the Universal Control Plane can also include secure image scanning and continuous monitoring of your images in the registry. Finally, Docker Enterprise Edition includes Docker Trusted Registry or DTR.
 * [Install UCP for production](https://docs.docker.com/datacenter/ucp/2.2/guides/admin/install)
-
+![UCP-Arch](1-Installation-and-configuration/Docker-UCP-arch.png)
 ## Docker NameSpaces
 * The Docker engine utilizes something called 'NamespacesInstall UCP for production' to isolate what's happening in the running containers from the operating system that those containers are running on. With Namespaces the kernal resources such as the process ID, user IDs, network storage, and inner process communications or IPC, can all be virtualized and shared between the host operating system and the containers running on top. Namespaces weren't created by Docker.
 
@@ -15,6 +18,9 @@
 ## Docker control groups and Limit a container's resources
 * [Limit a container's resources](https://docs.docker.com/config/containers/resource_constraints/)
 * To add user to a group use -- sudo usermod -aG docker $USER
+![control-groups1](1-Installation-and-configuration/Docker-control-groups.png)
+
+![control-groups1](1-Installation-and-configuration/Docker-control-groups-1.png)
 
 ## Docker storage drivers
 * [Docker storage drivers](https://docs.docker.com/storage/storagedriver/select-storage-driver/)
