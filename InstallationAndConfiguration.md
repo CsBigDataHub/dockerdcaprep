@@ -18,7 +18,10 @@
 ## Docker control groups and Limit a container's resources
 * [Limit a container's resources](https://docs.docker.com/config/containers/resource_constraints/)
 * To add user to a group use -- sudo usermod -aG docker $USER
+* Understand Docker Control groups
 ![control-groups1](1-Installation-and-configuration/Docker-control-groups.png)
+
+* Memory and CPU options while running docker run command
 
 ![control-groups1](1-Installation-and-configuration/Docker-control-groups-1.png)
 
