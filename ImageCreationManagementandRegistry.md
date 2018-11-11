@@ -56,6 +56,30 @@ docker image inspect <image> --format='{{.ContainerConfig.Hostname}} ## will giv
 
 ### Using image tagging
 
-* [DockerTagsDocumentation](https://docs.docker.com/engine/reference/commandline/tag/)
+* [Docker-Tags-Documentation](https://docs.docker.com/engine/reference/commandline/tag/)
 
+**Insert 7nd Image here**
+
+### Creating an image from a file
+
+* [Docker-Build-options](https://docs.docker.com/engine/reference/commandline/build/)
+* [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+  
+```shell
+docker build -f <path to file > <path to dependency/build context dir>
+docker build --squash -f <path to file > -t <tagName> <path to dependency/build context dir> # to merge layers to on elayer
+docker container export $container_id > file.tar # To export a image or container to tar
+docker image import file.tar
+```
+
+## Docker Registry
+
+[Docker-Registy-doc](https://docs.docker.com/registry/)
+[Docker-Registy-conf](https://docs.docker.com/registry/configuration/)
+[Docker-Registy-signing](https://success.docker.com/article/introduction-to-docker-content-trust)
+[Docker-notary](https://docs.docker.com/notary/getting_started/)
+
+* Docker Registry is a stateless, highly scalable application that stores and lets you distribute Docker images. Registries could be local or private. They could also be cloud-based, which could be private or public.
+
+**Insert 8nd Image here**
 
