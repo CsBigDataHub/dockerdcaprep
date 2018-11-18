@@ -4,30 +4,30 @@
 
 * **Volumes**
 
-        - Docker Volumes are the recommended way to persist data, or to store persistent data that needs to live beyond the life of a container. 
+    - Docker Volumes are the recommended way to persist data, or to store persistent data that needs to live beyond the life of a container. 
 
-        - Docker Volume data is stored in var/lib/docker/volumes if you're running Docker on Linux. 
+    - Docker Volume data is stored in var/lib/docker/volumes if you're running Docker on Linux. 
 
 * **Bind Mounts**
 
-        - Another option for data storage when using Docker containers is to use a bind mount.
+    - Another option for data storage when using Docker containers is to use a bind mount.
 
-        - A bind mount has limited functionality, and you have to use the exact file path on the host. 
+    - A bind mount has limited functionality, and you have to use the exact file path on the host. 
 
-        - For that reason, and a number of other reasons, Docker Volumes are highly recommended over Docker bind mounts.
+    - For that reason, and a number of other reasons, Docker Volumes are highly recommended over Docker bind mounts.
 
 * **Tmpfs Mount**
 
-        -  A third option that you have is called a tempfs mount. 
+    -  A third option that you have is called a tempfs mount. 
 
-        -  Tempfs mounts are stored only in the host memory in Linux, and this is the least recommended option for data storage when using Docker containers. 
+    -  Tempfs mounts are stored only in the host memory in Linux, and this is the least recommended option for data storage when using Docker containers. 
 
-    **1st pic here**
+            **1st pic here**
 
-        -  That container is running on top of a file system, and Docker has access to a specific area in that file system. 
-        -  A bind mount directly accesses the file system, whereas a Docker Volume stores its data inside the designated Docker area within the file system.
-        -  On the other hand, a tempfs mount stores its data inside the memory on the host where the container is running.
-        -  It's important to keep these three different options in mind when you consider data storage for Docker containers, with the Docker Volume always being the most highly-recommended option. 
+    -  That container is running on top of a file system, and Docker has access to a specific area in that file system. 
+    -  A bind mount directly accesses the file system, whereas a Docker Volume stores its data inside the designated Docker area within the file system.
+    -  On the other hand, a tempfs mount stores its data inside the memory on the host where the container is running.
+    -  It's important to keep these three different options in mind when you consider data storage for Docker containers, with the Docker Volume always being the most highly-recommended option. 
 
 ### Compare object storage solutions
 
@@ -42,9 +42,9 @@ docker history <docker-id>
 
 ## Configure Docker Storage
 
-[select-storage-driver](https://docs.docker.com/storage/storagedriver/select-storage-driver/)
-[overlayfs-storage-driver](https://docs.docker.com/storage/storagedriver/overlayfs-driver)
-[Docker-RHEL-Stroge-Issue](https://batmat.net/2015/08/26/docker-storage-driver-dont-use-devicemapper/)
+-  [select-storage-driver](https://docs.docker.com/storage/storagedriver/select-storage-driver/)
+-  [overlayfs-storage-driver](https://docs.docker.com/storage/storagedriver/overlayfs-driver)
+-  [Docker-RHEL-Stroge-Issue](https://batmat.net/2015/08/26/docker-storage-driver-dont-use-devicemapper/)
 
 ### Change storage driver
 
@@ -58,8 +58,19 @@ docker save ## to save and back-up images
 
 ### Device mapper
 
-[device-mapper-driver](https://docs.docker.com/storage/storagedriver/device-mapper-driver/)
+- [device-mapper-driver](https://docs.docker.com/storage/storagedriver/device-mapper-driver/)
 
 ### Docker volumes
 
-[Volumes](https://docs.docker.com/storage/volumes/)
+- [Volumes](https://docs.docker.com/storage/volumes/)
+
+### Docker bind mount
+
+- [Bind-mount](https://docs.docker.com/storage/bind-mounts/)
+
+### Configure Docker cluster storage
+
+- [share-data-among-machines](https://docs.docker.com/storage/volumes/#share-data-among-machines)
+- [legacy_plugins](https://docs.docker.com/engine/extend/legacy_plugins/)
+- [methods-dealing-container-storage](https://thenewstack.io/methods-dealing-container-storage/)
+- [Pruning](https://docs.docker.com/config/pruning/)
