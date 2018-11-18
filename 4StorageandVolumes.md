@@ -22,16 +22,17 @@
 
     -  Tempfs mounts are stored only in the host memory in Linux, and this is the least recommended option for data storage when using Docker containers. 
 
-            **1st pic here**
+![4-StorageAndVolumes/1Storage.png](4-StorageAndVolumes/1Storage.png)
 
-    -  That container is running on top of a file system, and Docker has access to a specific area in that file system. 
-    -  A bind mount directly accesses the file system, whereas a Docker Volume stores its data inside the designated Docker area within the file system.
-    -  On the other hand, a tempfs mount stores its data inside the memory on the host where the container is running.
-    -  It's important to keep these three different options in mind when you consider data storage for Docker containers, with the Docker Volume always being the most highly-recommended option. 
+    
+-  That container is running on top of a file system, and Docker has access to a specific area in that file system. 
+-  A bind mount directly accesses the file system, whereas a Docker Volume stores its data inside the designated Docker area within the file system.
+-  On the other hand, a tempfs mount stores its data inside the memory on the host where the container is running.
+-  It's important to keep these three different options in mind when you consider data storage for Docker containers, with the Docker Volume always being the most highly-recommended option. 
 
 ### Compare object storage solutions
 
-    **2nd pic here**
+![4-StorageAndVolumes/2blockvsojectstorage-.png](4-StorageAndVolumes/2blockvsojectstorage-.png)
 
 ### Analyze Docker's layered storage
 
