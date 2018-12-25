@@ -8,6 +8,7 @@
 * [Docker best practices](https://success.docker.com/article/docker-ee-best-practices)
 
 ## Universal Control Plane
+* UCP runs an agent on all nodes in the cluster to monitor them and a set of services on the controller nodes. This includes identity services to manage users, Certificate Authorities (CA) for user and cluster PKI, the main controller providing the Web UI and API, data stores for UCP state, and a Classic Swarm service for backward compatibility.
 * With the highest level of Docker Enterprise the Universal Control Plane can also include secure image scanning and continuous monitoring of your images in the registry. Finally, Docker Enterprise Edition includes Docker Trusted Registry or DTR.
 * [Install UCP for production](https://docs.docker.com/datacenter/ucp/2.2/guides/admin/install)
 ![UCP-Arch](1-Installation-and-configuration/Docker-UCP-arch.png)
@@ -39,7 +40,8 @@ docker swarm join --token <token-id> <ipaddress:port>
 
 
 ## Backing up Docker
-* [Backing Docker EE](https://docs.docker.com/eebackup)
+* [Backing Docker EE](https://docs.docker.com/ee/backup)
+  - Backup Docker Swarm by Backing up the entire `/var/lib/docker/swarm ` directory
 * [Backing Swarm cluster](https://docs.docker.com/engine/swarm/admin_guide/#back-up-the-swarm)
 ### Backing up swarm
 * stop Docker 
